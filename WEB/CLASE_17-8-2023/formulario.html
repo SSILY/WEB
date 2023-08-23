@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos del alumno</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre">
+            <br> <br>
+            <label for="correo">Correo</label>
+            <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com">
+            <br><br>
+            <label for="seleccion">Carrera</label>
+            <select name="seleccion" id="sel">
+                <option name="carrera" disabled selected hidden>Elige una opcion</option>
+                <optgroup label="CSH">
+                    <option value="Derecho">Derecho</option>
+                    <option value="Sociologia">Sociologia</option>
+                    <option value="Economia">Economia</option>
+                </optgroup>
+                <optgroup label="CBI">
+                    <option value="Compu">Computación</option>
+                    <option value="Quimica">Química</option>
+                    <option value="Física">Física</option>
+                </optgroup>
+                <optgroup label="CYAD">
+                    <option value="ARQ">Arquitectura</option>
+                    <option value="COM GRAF">Comunicacion Gráfica</option>
+                    <option value="DIS GRAF">Diseño Gráfico</option>
+                </optgroup>
+                
+            </select>
+            <br><br>
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" placeholder="edad">
+            <br><br>
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha">
+            <br><br>
+            <label for="colorFav">Color favorito</label>
+            <input type="color" name="colorFav" id="color">
+            <br><br>
+            <input type="button" value="Enviar">
+        </fieldset>
+
+       
+    </form>
+</body>
+</html>

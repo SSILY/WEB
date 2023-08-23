@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica HTML</title>
+</head>
+<body>
+    <!-- PARRAFOS-->
+    <p>Parrafos</p>
+    <p>Hola</p>
+    Las lineas
+    escritas
+    en otra linea sin la etiqueta
+    lo maneja en parrafo
+
+    <p>En el proyecto no se debe de colocar el texto sin etiqueta de parrafo</p>
+
+    <!--ENCABEZADOS-->
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>Encabezado 4</h4>
+    <h5>Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+
+    <!--LISTAS-->
+    <h1>Lista sin orden</h1>
+
+    <ul>
+        <li>Item uno</li>
+        <li>Item dos</li>
+        <li>Item tres</li>
+    </ul>
+
+    <h1>Lista ordenada</h1>
+    <ol>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+    </ol>
+
+    <!--FORMULARIOS-->
+    <h1>Formularios</h1>
+    <form>
+        <label>Etiqueta</label>
+        <br><br>
+        <label for="text">Texto</label>
+        <input type="text">
+        <br><br>
+        <label for="color">Color</label>
+        <input type="color">
+        <br><br>
+        <label for="button">Boton</label>
+        <input type="button" value="Enviar">
+        <br><br>
+        <label for="range">Rango</label>
+        <input type="range" name="rango" id="seleccionRango">
+        <br><br>
+        <label for="date">Fecha</label>
+        <input type="date" name="fecha" id="seleccionFecha">
+        <br><br>
+        <label for="checkbox">checkbox</label>
+       <input type="checkbox" name="check" id="seleccion">
+       <br><br>
+       <label for="email">Email</label>
+       <input type="email" name="email" id="mail" placeholder="ingresa email">
+       <br><br>
+       <label for="area"></label>
+       <textarea name="area" id="area" cols="30" rows="10"></textarea>
+       <br><br>
+       <label for="select">Seleccion</label>
+       <select name="select" id="sel">
+        <option value="1">Op1</option>
+        <option value="2">Op2</option>
+        <optgroup label="grp1">
+            <option value="3">Op3</option>
+        |<option value="4">Op4</option>
+        </optgroup>
+       </select>
+    </form>
+
+    <!--FIELDSET-->
+    
+    <br>
+    <h1>FIELDSET</h1>
+    <fieldset>
+        <legend>Caja de elementos</legend>
+        <input type="text" placeholder="texto">
+    </fieldset>
+
+    <!--ENLACES-->
+    <br>
+    <h1>Enlaces</h1>
+    <h2>Ruta absoluta</h2>
+    <p>Direccion completa del recurso</p>
+    <a href="hola.html" target="_top">Nombre</a>
+    <a href="https://www.google.com">Google</a>
+
+    <h2>Ruta relativa</h2>
+    <p>Direccion acortada del recurso</p>
+    <a href="hola.html">Nombre</a>
+
+    <!--IMAGENES-->
+    <br>
+    <h1>Imagen</h1>
+    <img src="img.png" alt="imagen" width="50">
+    <img src="media/logoUAM.png" alt="logo" width="200">
+
+    <!--TABLAS-->
+    <h1>Tablas</h1>
+    <table border="1"">
+        <th>Encabezado 1</th>
+        <th>Encabezado 2</th>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+    </table>
+
+    <!--IFRAME-->
+    <br>
+    <iframe src="index.html" frameborder="1"></iframe>
+    <iframe src="hola.html" frameborder="1"></iframe>
+
+</body>
+</html>

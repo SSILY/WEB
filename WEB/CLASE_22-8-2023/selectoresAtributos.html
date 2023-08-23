@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectores de Atributos</title>
+    <!--
+        elemento [atributo]{
+            propiedad: valor;
+        }
+    -->
+    <style>
+        img[alt]{
+            border: 10px;
+            border-style: solid;
+            border-color: aqua;
+        }
+        img[alt = "Icono"]{
+            border: 10px;
+            border-style: solid;
+            border-color: red;
+        }
+        img[alt ~= "Computadora"]{
+            border: 10px;
+            border-style: solid;
+            border-color: yellow;
+        }
+        p[class |= "fuente"]{
+            color: blueviolet;
+            font-size: xx-large;
+        }
+        p[class ^= "letra"]{
+            color: blue;
+
+        }
+        p[class $= "rillo"]{
+            background-color: yellow;
+        }
+        p[class *= "fondoA"]{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <img src="/media/desarrollo.png">
+    <img src="/media/desarrollo.png" alt="Icono">
+    <img src="/media/desarrollo.png" alt="Computadora">
+    <img src="/media/desarrollo.png" alt="iconocomputadora">
+    <p class="fuente">Párrafo 1</p>
+    <p class="fuente-Grande">Párrafo 2</p>
+    <p class="letraAzul">Párrafo 3</p>
+    <p class="fondoAmarillo">Párrafo 4</p>
+    <p class="fondoAqua">Párrafo 5</p>
+</body>
+</html>

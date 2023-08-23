@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectores combinadores</title>
+    <!--Selectores descendientes-->
+    <!--
+    <style>
+        form p{
+            color: red;
+        }
+    </style>
+    -->
+
+    <!--Selectores de hijos-->
+    <!--
+    <style>
+        form > p{
+            color: red;
+        }
+    </style>
+    -->
+
+    <!--Selectores de hermano adyacente-->
+    <!--
+    <style>
+        form + p{
+            color: red;
+        }
+    </style>
+    -->
+    
+    <!--Selectores de hermanos general-->
+    <style>
+        form ~ p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <section>
+            <p>Parrafo en seccion en formulario 1</p>
+        </section>
+        <p>Parrafo 1 de formulario 1</p>
+        <p>Parrafo 2 de formulario 1</p>
+    </form>
+    <p>Parrafo 1 fuera de formularios</p>
+    <form>
+        <section>
+            <p>Parrafo en seccion en formulario 2</p>
+        </section>
+        <p>Parrafo 1 de formulario 2</p>
+        <p>Parrafo 2 de formulario 2</p>
+    </form>
+    <h1>Encabezado 1</h1>
+    <p>Parrafo 2 fuera de formularios</p>
+</body>
+</html>

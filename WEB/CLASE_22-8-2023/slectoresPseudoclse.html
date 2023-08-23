@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectores de pseudoclase</title>
+    <!--
+        selector : pseudoclase{
+            propiedad: valor;
+        }
+    -->
+    <style>
+        form:first-child{
+            color:red;
+        }
+        form:hover a{
+            background-color: aqua;
+        }
+        button:focus{
+            background-color: blue;
+            font-size: x-large;
+        }
+        a:link{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <section>
+            <p>Parrafo en seccion en formulario 1</p>
+        </section>
+        <a href="https://www.google.com">Enlace de seccion de formulario 1</a>
+        <p>Parrafo 1 de formulario 1</p>
+        <p>Parrafo 2 de formulario 1</p>
+    </form>
+    <p>Parrafo 1 fuera de formularios</p>
+    <form>
+        <section>
+            <p>Parrafo en seccion en formulario 2</p>
+        </section>
+        <p>Parrafo 1 de formulario 2</p>
+        <p>Parrafo 2 de formulario 2</p>
+        <button>Boton formulario 2</button>
+    </form>
+    <h1>Encabezado 1</h1>
+    <p>Parrafo 2 fuera de formularios</p>
+</body>
+</html>

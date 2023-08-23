@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectores de pseudoelemento</title>
+    <!--
+        selector : pseudoelemento{
+            propiedad: valor;
+        }
+    -->
+    <style>
+        p::first-line{
+            color: red;
+        }
+        p::first-letter{
+            font-size: xx-large;
+        }
+        h1::before{
+            content: url("/media/desarrollo.png");
+        }
+        h1::after{
+            content: url("/media/desarrollo2.png");
+        }
+        p::selection{
+            background-color: aqua;
+            color: blue;
+        }
+        ::marker{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desarrollo web</h1>
+    <p>El desarrollo web es un proceso complejo que implica la creación de productos digitales en línea. También es un término que define la creación de sitios web para Internet o una intranet. Para conseguirlo se hace uso de tecnologías de software del lado del servidor y del cliente que involucran una combinación de procesos de base de datos con el uso de un navegador web a fin de realizar determinadas tareas o mostrar información.</p>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <h1>Gutierrez Ramos Alberto Daniel</h1>
+</body>
+</html>
