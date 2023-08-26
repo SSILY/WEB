@@ -1,4 +1,4 @@
-/*Imagenes en general
+/*Imagenes con atributo que contengan .png, .jpg o .jpeg
     ancho 200px
     alto 200px
     borde rojo
@@ -6,7 +6,7 @@
     ancho de borde 10px
     margen 20px
 */
-img{
+img[src $= ".png"], img[src $= ".jpg"], img[src $= ".jpeg"]{
     width: 200px;
     height: 200px;
     border-color: red;
