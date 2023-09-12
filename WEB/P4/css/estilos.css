@@ -1,0 +1,382 @@
+/*
+* Contenedor MAIN
+* Disposicion: 3cols x 4 filas
+*/
+.container {  
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    gap: 10px 0px;
+    grid-template-areas:
+        "header header header"
+        "cuerpo-form cuerpo-form cuerpo-form"
+        "cuerpo-tabla cuerpo-tabla cuerpo-tabla"
+        "footer footer footer";
+}
+
+/*
+* Estilo para todo lo que venga despues de un heading 1
+*/
+h1::after {
+    content: url("../img/desarrollo.png");
+}
+
+/*
+* Estilo para todos los headings 1
+*/
+h1 {
+    color: blue;
+    
+}
+
+/******************************************
+* Contenedor principal del header
+*******************************************/
+.header { 
+    display: grid;
+    grid-area: header;
+    background-color: orange;
+    justify-items: center;
+    align-items: end;
+}
+
+/******************************************
+* Contenedor principal del formulario
+* Disposicion: 4 cols x 2 filas
+*******************************************/
+.cuerpo-form {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "etiquetas formulario formulario botones"
+        "etiquetas formulario formulario botones";
+    grid-area: cuerpo-form;
+}
+
+/*
+* Estilo para todos los parrafos
+*/
+p {
+    font-size: x-large;
+    margin-top: 8px;
+}
+
+/*
+* Estilo para todos los list-item
+*/
+ul > li {
+    list-style-type: none;
+}
+
+/*
+* Estilo para todas las anclas
+*/
+a {
+    text-decoration: none;
+}
+
+/*
+* Contenedor de las etiquetas
+*/
+.etiquetas {
+    display: grid;
+    gap: 0 0;
+    grid-area: etiquetas;
+    justify-items: end; 
+    text-align: right;
+}
+
+/*
+* Margen inferior al titulo de esta seccion
+*/
+.etiquetas p{
+    margin-bottom: 25px;
+}
+
+/*
+* Eliminamos el comportamiento de lista
+*/
+.etiquetas ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+* Margen inferior a los list items de esta seccion
+*/
+.etiquetas ul li {
+    margin-bottom: 15px;
+}
+
+/*
+* Estilo de los links
+*/
+.etiquetas ul li a {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+* Al presionar los links de practicas
+*/
+.etiquetas ul li a:active {
+    background-color: white;
+    color: blueviolet;
+    font-size: x-large;
+    font-weight: unset;
+}
+
+/*
+* Contenedor principal de todo el formulario y frame
+*/
+.formulario { 
+    grid-area: formulario; 
+    display: grid;
+    justify-items: stretch;
+}
+
+/*
+* contenedor del formulario
+*/
+.formulario form {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 10px 0px;
+    justify-items: stretch;
+}
+
+/*
+* Los elementos input de tipo text y email
+*/
+input[type="text"], input[type="email"] {
+    height: 30px;
+}
+
+/*
+* Al elemento input de tipo submit ... (Enviar)
+*/
+input[type="submit"] {
+    height: 40px;
+    border: 3px solid blue;
+    background-color: white;
+    color: blue;
+    font-size: large;
+}
+
+/*
+* Contenedor de los botones
+*/
+.botones { 
+    grid-area: botones;
+    display: grid;
+    justify-items: center;
+}
+
+/*
+* Margen inferior al texto de esta seccion
+*/
+.botones p {
+    margin-bottom: 50px;
+}
+
+/*
+* Eliminamos el comportamiento de lista quitando el padding
+*/
+.botones ul {
+    padding: 0;
+}
+
+/*
+* Margen inferior a los list items
+*/
+.botones ul li {
+    margin-bottom: 40px;
+}
+
+/*
+* Dar forma a los botones de esta seccion
+*/
+.botones ul li a {
+    display: block;
+	width:100%;
+    height: 30px;
+	padding: 6px 0;
+	text-align: center;
+	font-size: x-large;
+    font-weight: bold;
+    color:  black;
+	background-color: aqua;
+}
+
+/*
+* Al pasar el raton por los botones de pagina
+*/
+.botones ul li a:hover {
+    border: solid;
+    border-color: aqua;
+    background-color: white;
+    color: aqua;
+}
+
+/********************************************
+* Cuerpo de la tabla
+* Disposicion: 6 cols x 2 filas
+********************************************/
+.cuerpo-tabla {  
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    /*grid-auto-flow: row;*/
+    grid-template-areas:
+        "img1 img1 tabla tabla tabla img2"
+        "img1 img1 tabla tabla tabla img2";
+    grid-area: cuerpo-tabla;
+}
+
+/*
+* Borde rojo a todas las imagenes
+*/
+img {
+    border: 10px solid red;
+    margin: 10px;
+    /*overflow: hidden;*/
+}
+
+/*
+* Contenedor de las dos imagenes juntas
+*/
+/************FLEX**********************/
+.img1 { 
+    grid-area: img1;
+    /*display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;*/
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*
+* Contenedor de la tabla
+*/
+/*************FLEX**********************/
+.tabla { 
+    grid-area: tabla; 
+    display: flex;
+    align-content: stretch;
+    
+}
+
+/*
+* Estilos flex para redimension de la tabla
+*/
+.tabla table {
+    flex-grow: 10;
+    flex-shrink: 10;
+}
+
+/*
+* Estilos para la tabla (bordes)
+*/
+table, th, td {
+    text-align: center;
+    border: 5px solid blue;
+    border-collapse: collapse;
+}
+
+/*
+* Contenedor de imagen sola
+*/
+.img2 { 
+    grid-area: img2; 
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /*display: flex;
+    justify-items: center*/
+}
+
+/*********************************************
+* * FOOTER
+* Disposicion: 5 cols x 1 fila
+***********************************************/
+
+.footer {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    /*grid-auto-flow: row;*/
+    grid-template-areas:
+        "Equipo practica4 practica4 practica4 empresa";
+    grid-area: footer;
+    
+}
+
+/* 
+* Contenedor de equipo 8
+*/
+.Equipo { 
+    display: grid;
+    grid-area: Equipo;
+    background-color: aqua;
+    justify-items: center;
+    align-items: end;
+}
+
+/*
+* Heading 1 (EQUIPO 8)
+*/
+.Equipo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+* Contenedor de practica 4
+*/
+/***************FLEX*******************/
+.practica4 { 
+    /*display: grid;
+    grid-area: practica4;
+    background-color: violet;
+    justify-items: center;
+    align-items: end;*/
+    grid-area: practica4;
+    background-color: violet;
+    display: flex;
+    flex: 10 10;
+    justify-content: center;
+}
+
+/*
+* Heading 1 (Práctica 4)
+*/
+.practica4 h1{
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+}
+
+/*
+* Contenedor nombre empresa
+*/
+.empresa { 
+    display: grid;
+    grid-area: empresa;
+    background-color: aqua;
+    justify-items: center;
+    align-items: end;
+}
+
+/*
+* Heading (TUWA)
+*/
+.empresa h1 {
+    margin: 0;
+    padding: 0;
+}
