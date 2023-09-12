@@ -1,0 +1,110 @@
+
+/*
+* Contenedor principal
+* Disposicion 3 cols x 4 filas
+*/
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 50px 0px;
+    grid-template-areas:
+        "header header header"
+        "Prototipo-1 Prototipo-1 Prototipo-1"
+        "Prototipo-2 Prototipo-2 Prototipo-2"
+        "Prototipo-3 Prototipo-3 Prototipo-3";
+}
+
+/*Botones*/
+a {
+    padding: 20px;
+    justify-self: stretch;
+    text-align: center;
+    text-decoration: none;
+    font-size: xx-large;
+    cursor: pointer;
+    background-color: crimson;
+    color: snow;
+    border: 5px solid black;
+}
+
+a:hover {
+    background-color: skyblue;
+    color: slateblue;
+}
+
+/*Empresa y equipo*/
+.header { 
+    grid-area: header; 
+    display: grid;
+}
+
+.header h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+/*Contenedor del prototipo 1*/
+.Prototipo-1 { 
+    grid-area: Prototipo-1;
+    display: grid;
+}
+
+/*
+* Contenedor del prototipo 2
+* Disposicion 3 cols x 1 fila
+*/
+.Prototipo-2 {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 40px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "proto2 design design";
+    grid-area: Prototipo-2;
+}
+
+/*Contenedor del boton de prototipo 2*/
+.proto2 { 
+    grid-area: proto2; 
+    display: grid;
+    justify-self: stretch;
+}
+
+/*Contenedor del boton de diseño*/
+.design { 
+    grid-area: design; 
+    display: grid;
+    justify-self: stretch;
+}
+
+/*
+* Contenedor del prototipo 3
+* disposicion 3 cols x 1 fila
+*/
+.Prototipo-3 {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 40px;
+    grid-template-areas:
+        "proto3 tema tema";
+    grid-area: Prototipo-3;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.proto3 { 
+    grid-area: proto3; 
+    display: grid;
+    justify-self: stretch;
+}
+
+.tema { 
+    grid-area: tema; 
+    display: grid;
+    justify-self: stretch;
+}
+
