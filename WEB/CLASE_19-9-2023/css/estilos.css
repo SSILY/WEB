@@ -1,0 +1,53 @@
+#principal {
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;*/
+    grid-template-areas: 
+        "botones contenido contenido contenido";
+    
+}
+
+#botones, #contenido {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#botones {
+    grid-area: botones;
+}
+
+button {
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    background-color: crimson;
+    border: solid black;
+    color: snow;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+
+#contenido {
+    grid-area: contenido;
+}
+
+div p {
+    padding: 20px;
+}
+
+.p1 {
+    background-color: beige;
+    border: solid blue;
+}
+
+.datos {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#mensajeBoton {
+    border: solid blue;
+}
