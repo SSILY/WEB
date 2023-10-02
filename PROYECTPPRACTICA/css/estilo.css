@@ -7,7 +7,7 @@ color: blue;
 }
 
 h1::after{
-    content: url(/img/desarrollo.png);
+    content: url(/PROYECTPPRACTICA/img/desarrollo.png);
 }
 
 /*parrafo hermano inmediato de h2 primera linea y parrafo primer hijo primera linea
