@@ -1,0 +1,17 @@
+#burbujeo{
+    border:blue 5px solid;
+    background-color: antiquewhite;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#captura{
+    border: red 5px solid;
+    background-color: beige;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+p{
+    width: max-content;
+}

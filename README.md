@@ -2,7 +2,7 @@
 
 ## Documentos de la clase de Taller de Desarrollo de Aplicaciones Web
 
-==Importante==
+### **Importante**
 
 En este repo, encontrarán todos los documentos que se realicen en clase (de mi autoría)
 

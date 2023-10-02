@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleForm.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Formulario de membresia</legend>
+        <form>
+            <label for="Nombre">Nombres</label>
+            <input type="text" name="Nombre" id="" placeholder="Ingresa tu Nombre">
+            <br><br>
+            <label for="Apellido">Apellidos</label>
+            <input type="text" placeholder="Ingresa tu Apellido">
+            <br><br>
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" id="" placeholder="Ingresa tu Telefono">
+            <br><br>
+            <label for="email">email</label>
+            <input type="email" name="email" id="" placeholder="ejemplo@dominio.com">
+            <br><br>
+            <label for="tipo">Situación</label>
+            <select name="" id="">
+                <option value="" disabled selected hidden>Seleccione uno</option>
+                <option value="">Estudiante</option>
+                <option value="">Trabajador</option>
+                <option value="">Docente</option>
+            </select>
+            <br><br>
+            <h4>¿Haz leído nuestros terminos y condiciones?</h4>
+            <input type="radio" name="Confirm" id="">
+            <label for="">Sí</label>
+            <br><br>
+            <input type="radio" name="Deny" id="">
+            <label for="Deny">No</label>
+            <br><br>
+            <h3>¿Deseas recibir nuestro newsletter?</h3>
+            <input type="checkbox" name="Si" value="Si">
+            <label for="Si">Sí</label>
+            <br>
+            <input type="checkbox" name="No" value="No">
+            <label for="No">No</label>
+            <br><br>
+            <h4>Indicanos tu rango aproximado de solicitud de prestamo de libros</h4>
+            <label for="prestamoLibros">0</label>
+            <input type="range" name="prestamoLibros" id="" value="0" max="5">
+            <label for="prestamoLibros">5</label>
+            <br><br>
+            <input type="submit" name="" id="" value="Enviar">
+        </form>
+    </fieldset>
+</body>
+
+</html>

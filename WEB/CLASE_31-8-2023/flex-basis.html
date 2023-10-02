@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-basis</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*flex-flow: row wrap*/
+            border:purple dotted
+        }
+        p{
+            color: red;
+            background-color: aqua;
+            border-style: solid;
+            flex-basis: 70px; /*indica el tamaño del elemento (ancho)*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+    </div>
+</body>
+</html>

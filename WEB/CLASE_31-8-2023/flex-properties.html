@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex-shrink</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            
+            /*flex-flow: row wrap*/
+            border:purple dotted
+        }
+        
+        .uno{
+            flex-shrink: 5;
+        }
+        .dos{
+            flex-shrink: 1; /*mientras mas alto sea el valor más crece*/
+        }
+
+        div>ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+        }
+
+        div li {
+            float: left;
+        }
+
+        div li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: 1px solid;
+            background-color: aqua;
+        }
+        div li a:hover {
+            background-color: lightblue;
+        }
+
+        /*flex: grow shrink basis*/
+        .links{
+            flex: 3 2 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#" class="links">Home</a></li>
+            <li><a href="#" class="links">Contactou</a></li>
+            <li><a href="#" class="links">About Us</a></li>
+            <li><a href="#" class="links">Lel</a></li>
+        </ul>
+    </div>
+</body>
+</html>

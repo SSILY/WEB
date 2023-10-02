@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex-grow</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*flex-flow: row wrap*/
+            border:purple dotted
+        }
+        p{
+            color: red;
+            background-color: aqua;
+            border-style: solid;
+            flex-basis: 20px; /*indica el tamaño del elemento (ancho)*/
+        }
+        .uno{
+            flex-grow: 1;
+        }
+        .dos{
+            flex-grow: 4; /*mientras mas alto sea el valor más crece*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="uno">1</p>
+        <p class="uno">2</p>
+        <p class="dos">3</p>
+        <p class="dos">4</p>
+        <p class="uno">5</p>
+        <p class="dos">6</p>
+    </div>
+</body>
+</html>
