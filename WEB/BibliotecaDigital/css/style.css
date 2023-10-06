@@ -1,0 +1,179 @@
+body {
+    background-color: #55443d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #a0cab5;
+    font-weight: bold;
+}
+
+.card-body a, .card-footer a {
+    background-color: #f38a8a;
+    border: #f38a8a;
+}
+
+.card-body a:hover, .card-footer a:hover {
+    background-color: #ec4343;
+    border: #ec4343;
+}
+
+
+/**************************NAV****************************************/
+nav, footer {
+    background-color: #cde9ca;
+}
+/**************************CARRUSEL***********************************/
+.carousel{
+    
+    margin-bottom: 60px;
+}
+
+.carousel img{
+
+    height: 80vh;
+
+}
+
+.carousel p, .carousel h5 {
+    /*
+    * https://css-tricks.com/almanac/properties/t/text-shadow/ [ref]
+    */
+    color: white;
+    text-shadow: -4px 3px 2px #000;
+    /*text-shadow: -4px 3px 0 #495392, -14px 7px 2px #0a0e27;*/
+    /*text-shadow: -4px 3px 0 #0a0e27;*/
+}
+
+/************************RECOMENDACIONES******************************/
+/*
+* Tamaño de las imagenes de las tarjetas
+*/
+.card > img {
+    width: 100%;
+    height: 318px;
+}
+
+/*******************************FAQ***********************************/
+/*
+* Padding del contenedor de las FAQ
+*/
+.FAQ {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    
+}
+
+.FAQ button {
+    font-weight: bold;
+    
+    
+}
+
+.FAQ button:hover {
+    background-color: #f38a8a;
+    color: #f1edd0;
+    font-weight: bold;
+}
+
+/******************************FOOTER*********************************/
+#pie-pagina {
+    padding: 15px 0;
+    min-height: 360px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*Enlaces*/
+#pie-pagina a {
+    color: #000;
+    font-weight: 400;
+    margin: 0 0.2rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Contenedor de la derecha*/
+.container-competencia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: min-content;
+}
+
+.competencia {
+    display: flex;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-inline-start: unset;
+    margin-bottom: 1rem;
+    padding-inline-start: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.parte1 {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-inline-start: unset;
+    margin-bottom: 1rem;
+    padding-inline-start: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social {
+    display: flex;
+    margin-top: 30px;
+    list-style: none;
+    margin-inline-start: unset;
+    padding-inline-start: 0;
+    padding: 0;
+    order: 1;
+    margin: 20px 0 15px;
+}
+
+.social li a {
+    display: block;
+    line-height: 45px;
+    color: #000;
+}
+
+/*Imagen de una biblio fachera*/
+.biblio {
+    position: absolute;
+    left: 6%;
+    top: 140px;
+    width: 400px;
+    color: #000;
+}
+
+.biblio0 img {
+    height: auto;
+    width: 100%;
+}
+
+.info-biblio {
+    margin: 35px 0 0;
+    text-align: right;
+}
+
+/*Logo del footer*/
+.logo-footer {
+    position: absolute;
+    top: 20px;
+    width: min-content;
+}
+
+.logo-footer img {
+    height: 150px;
+    width: 150px;
+}
+
+/**************
+** PAGINA DE AUTORES
+***************/
+
