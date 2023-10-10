@@ -8,6 +8,22 @@ const aplicacion=express();
 
 const puerto=3000;
 
+/*CONEXION A BASE DE DATOS*/
+/***************************
+17
+****************************/
+const mongoose =require('mongoose');
+const usuario='testUser1';
+const password='1uR6UKveIpFjkLkf';
+const nombreBD='Negocio';
+const uri=`mongodb+srv://${usuario}:${password}@tallerweb.r7lhfku.mongodb.net/${nombreBD}?retryWrites=true&w=majority`;
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(()=> console.log('Bien...estas conectado a la Base de Datos :D')) 
+  .catch(e => console.log('error de conexión', e))
+
+
+/*STATIC ROUTES*/
 /*******************************
 6
 ******************************/
@@ -18,6 +34,12 @@ aplicacion.get('/', (req,resp) => {
     resp.send('Página de inicio')
 });
 
+/*Para usar el router*/
+/*******************************
+14
+******************************/
+aplicacion.use('/',require('./router/rutasPagina'));
+
 /*******************************
 7
 ******************************/
@@ -27,12 +49,13 @@ aplicacion.get('/', (req,resp) => {
 /*******************************
 8
 ******************************/
+/*
 aplicacion.get('/contacto',(req,resp)=>{
     resp.render('contacto',{
         usuario:"Daniel",
         apellido:"Gutierrez"
     })
-});
+});*/
 
 /*******************************
 4
@@ -62,6 +85,8 @@ aplicacion.use((req,resp,next)=>{
     })
   });
 
+
+
 /*LAS PETICIONES SE COLOCAN ANTES QUE EL SERVIDOR ESCUCHE*/
 
 aplicacion.listen(puerto, () => {
@@ -72,3 +97,4 @@ aplicacion.listen(puerto, () => {
 3
 ******************************/
 aplicacion.use(express.static(__dirname+'/public'));
+
