@@ -63,6 +63,7 @@ function enviarFormulario(event) {
 
 // Agregar un evento para manejar el envío del formulario
 let formulario = document.querySelector('#formulario');
+
 formulario.addEventListener('submit', enviarFormulario);
 
 function cambioBusqueda (){ 
@@ -88,18 +89,12 @@ document.getElementById('btn_general').addEventListener('click', cambioBusqueda)
 document.getElementById('btn_esp').addEventListener('click', cambioBusqueda);
 
 //acerca De
-document.getElementById('nav_AcercaDe').addEventListener('click', ()=>{
+document.getElementById('nav_AcercaDe').addEventListener('click', () => {
     document.getElementById('carouselExampleDark').setAttribute('style', 'display: none;');
     document.getElementById('card_acerca').setAttribute('style', 'display: "block";');
 });
 
-document.getElementById('btn_AcercaDe_Atras').addEventListener('click', ()=>{
+document.getElementById('btn_AcercaDe_Atras').addEventListener('click', () => {
     document.getElementById('carouselExampleDark').setAttribute('style', 'display: "block";');
     document.getElementById('card_acerca').setAttribute('style', 'display: none;');
 });
-
-
-
-
-
-

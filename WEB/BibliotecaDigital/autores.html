@@ -76,7 +76,7 @@
         <!--BARA DE NAVEGACION FIN-->
 
         <!--AUTORES INICIO-->
-        <div class="container-xxl pt-5">
+        <div class="container-xxl pt-2" id="grid-autores">
             <h1 class="text-center display-1 p-4">"Los genios literarios más destacados de la historia"</h1>
             <div class="row row-cols-1 row-cols-md-4 g-2">
                 <div class="col">
@@ -88,7 +88,7 @@
                             
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-dickens">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <p class="card-text">Fue un escritor, ensayista y filósofo francés, autor de numerosas obras de diversos géneros que lo convirtieron en uno de los mayores y más crudos literatos de la literatura universal.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-sade">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                             <p class="card-text">Fue un novelista, poeta, dramaturgo y soldado español. Es ampliamente considerado una de las máximas figuras de la literatura española.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-miguel">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                             <p class="card-text">Fue un novelista, periodista, ensayista y crítico británico nacido en la India, autor entre otras obras de las novelas distópicas Rebelión en la granja y 1984.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-orwell">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                             <p class="card-text">Fue un dramaturgo, novelista, poeta y naturalista alemán, principal representante del Clasicismo de Weimar. Ejerció una gran influencia sobre el Romanticismo, especialmente sobre el Círculo de Jena.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-goethe">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                             <p class="card-text">Fue una novelista británica que vivió durante la época georgiana. La ironía que empleaba para dotar de comicidad a sus novelas hace que Jane Austen sea considerada entre los clásicos de la novela inglesa.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-jane">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                             <p class="card-text">Fue una escritora, dramaturga, ensayista y biógrafa británica reconocida principalmente por ser la autora de la novela gótica Frankenstein o el moderno Prometeo, considerada la primera novela de ciencia ficción moderna y que logra inaugurar el género.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-mary">Listado de libros</a>
                         </div>
                     </div>
                 </div>
@@ -172,13 +172,54 @@
                             <p class="card-text">Fue un poeta, dramaturgo y novelista romántico francés, considerado como uno de los más importantes en lengua francesa.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Listado de libros</a>
+                            <a href="#" class="btn btn-primary enlace-libros" id="btn-hugo">Listado de libros</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--AUTORES FIN-->
+
+        <!--LIBROS AUTORES INICIO (DINAMICO)-->
+        <div class="container-xxl pt-4" id="tabla-libros-autores" style="display: none;">
+            <h1 class="display-1 text-center" id="titulo-tabla">
+                Libros del autor [x]
+            </h1>
+            <table class="table table-hover table-info">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <div class="text-center">
+                <a href="#" id="btn_Tabla_Atras" class="btn btn-light"">Atrás</a>
+            </div>
+        </div>
+        <!--LIBROS AUTORES FIN-->
 
         <!--FOOTER INICIO-->
         <footer id="pie-pagina" class="mt-5 p-3 ">
@@ -266,7 +307,7 @@
 
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script-a.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
