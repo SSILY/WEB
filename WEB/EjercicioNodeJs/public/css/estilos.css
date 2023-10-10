@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+    background-color: #36304a;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+
+td {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: gray;
+    line-height: 1.4;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    padding-right: 10px;
+}
+
+#users {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}

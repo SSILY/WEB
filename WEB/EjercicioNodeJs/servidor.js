@@ -29,6 +29,10 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 ******************************/
 aplicacion.set('view engine','ejs');
 aplicacion.set('views',__dirname+'/views');
+/*******************************
+3
+******************************/
+aplicacion.use(express.static(__dirname+'/public'));
 
 aplicacion.get('/', (req,resp) => {
     resp.send('Página de inicio')
@@ -80,10 +84,10 @@ aplicacion.get('/contacto',(req,resp)=>{
 ******************************/
 aplicacion.use((req,resp,next)=>{
     resp.status(404).render('404',{
-      usuario:"Daniel",
-      apellido:"Gutiérrez"
+        usuario:"Daniel",
+        apellido:"Gutiérrez"
     })
-  });
+});
 
 
 
@@ -93,8 +97,5 @@ aplicacion.listen(puerto, () => {
     console.log('Escuchando las peticiones :D. Desde el puerto',puerto)
 });
 
-/*******************************
-3
-******************************/
-aplicacion.use(express.static(__dirname+'/public'));
+
 
