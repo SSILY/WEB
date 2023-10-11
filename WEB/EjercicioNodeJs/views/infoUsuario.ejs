@@ -1,0 +1,97 @@
+<!--******************************
+27
+******************************--> 
+<%- include('template/cabecera',{tituloPagina:'Info Usuario'})%>
+
+<body>
+    <%- include('template/navbar') %>
+    <h1>Información de usuario</h1>
+    <% if (error) { %>
+    <p>
+        <%= mensaje%>
+    </p>
+    <a href="/usuarios">Volver</a>
+    <% } %>
+    <% if (!error) { %>
+    <table class="table table-hover table-dark text-center">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+            <tr>
+                <td><%=usuario.nombre%></td>
+                <td><%=usuario.apellido%></td>
+            </tr>
+    </table>
+    <% } %>
+
+    <a href="/usuarios">Volver</a>
+    <!--******************************
+    29
+    ******************************--> 
+    <button id="botonEliminar" data-id="<%=usuario.id%>">Eliminar</button>
+
+    <!--******************************
+    32
+    ******************************-->      
+    <form id="formularioEditar" data-id="<%=usuario.id%>">
+        <input type="text" value="<%=usuario.nombre%>" name="nombre">
+        <input type="text" value="<%=usuario.apellido%>" name="apellido">
+        <button type="submit">Actualizar</button>
+    </form>
+    <!--******************************
+    31
+    ******************************--> 
+    <script>
+        const botonEliminar =document.querySelector('#botonEliminar');
+        botonEliminar.addEventListener('click',async()=>{
+            console.log('Diste click');
+            const id = botonEliminar.dataset.id;
+            try{
+                const dato=await fetch(`/usuarios/${id}`,{method:'delete'});
+                const res = await dato.json();
+                if(res.estado){
+                    alert(res.mensaje);
+                    window.location.href='/usuarios';
+                }else{
+                    console.log(res);
+                }
+        
+            }catch (error){
+                console.log(error);
+            }
+        });
+
+        /******************************
+        34
+        ******************************/
+
+        const formularioEditar = document.querySelector('#formularioEditar');
+        formularioEditar.addEventListener('submit',async (e)=>{
+            //Se tiene que tener si o si esta de preventDefault
+            e.preventDefault();
+            const nombre =formularioEditar.elements['nombre'].value;
+            const apellido = formularioEditar.elements['apellido'].value;
+            const id = formularioEditar.dataset.id;
+                const dato = await fetch(`/usuarios/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({nombre, apellido})
+                });
+                const res = await dato.json();
+                if(res.estado){
+                    alert('Se actualizo de forma correcta');
+                    window.location.href='/usuarios';
+                    
+                }else{
+                    alert('No se pudo actualizar');
+                    console.log(res);
+                }
+        });
+
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

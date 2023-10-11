@@ -1,0 +1,3 @@
+css a todo el proyecto
+navbar como plantilla con las 5 practicas
+Hacer uso de una nueva base de datos con 1 coleccion y al menos 4 campos

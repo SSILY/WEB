@@ -44,6 +44,20 @@ aplicacion.get('/', (req,resp) => {
 ******************************/
 aplicacion.use('/',require('./router/rutasPagina'));
 
+/******************************
+22
+******************************/
+aplicacion.use('/usuarios',require('./router/usuarios'));
+
+/******************************
+23
+******************************/
+const bodyParser = require('body-parser');
+// obtener de un formulario
+aplicacion.use(bodyParser.urlencoded({ extended: false }));
+// enviar en formato json
+aplicacion.use(bodyParser.json());
+
 /*******************************
 7
 ******************************/
@@ -88,6 +102,7 @@ aplicacion.use((req,resp,next)=>{
         apellido:"Gutiérrez"
     })
 });
+
 
 
 

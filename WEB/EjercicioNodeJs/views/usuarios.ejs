@@ -4,22 +4,29 @@
 <%- include('template/cabecera',{tituloPagina:'Usuarios'})%>
 
 <body>
+    <%- include('template/navbar') %>
     <h1 id="users">Usuarios</h1>
-    <table>
+    <table class="table table-hover table-dark text-center">
         <tr>
             <th>Nombre</th>
             <th>Apellido</th>
+            <th>Información</th>
         </tr>
         <% if (arregloUsuarios.length>0) { %>
             <% arregloUsuarios.forEach(usuario => { %>
                 <tr>
                     <td><%=usuario.nombre%></td>
                     <td><%=usuario.apellido%></td>
+                    <td><a href="usuarios/<%=usuario.id %>" class="btn btn-outline-light">Información</a></td>
                 </tr>
         <% }) %>
     <% } %>
         
     </table>
+    <div class="text-center">
+        <a href="/usuarios/crear" class="btn btn-outline-dark">Crear</a>
+    </div>
     
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

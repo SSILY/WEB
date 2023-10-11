@@ -1,0 +1,19 @@
+
+<%- include('template/cabecera',{tituloPagina:'Crear Usuario'})%>
+
+<body>
+    <%- include('template/navbar') %>
+    <!--******************************
+24
+******************************--> 
+    <h1>Crear un usuario</h1>
+        
+    <form action="/usuarios" method="POST">
+        <input type="text" name="nombre" placeholder="Escribe el nombre">
+        <input type="text" name="apellido" placeholder="Escribe el apellido">
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="/usuarios">Usuarios</a>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
