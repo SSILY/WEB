@@ -13,7 +13,7 @@ router.get('/contacto', (req, resp) => {
 resp.render('contacto',{
     usuario:"Daniel",
     apellido:"Gutierrez"
-  })
+  });
 });
 
 module.exports = router;

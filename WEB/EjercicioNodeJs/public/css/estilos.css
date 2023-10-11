@@ -34,7 +34,7 @@ td {
     padding-right: 10px;
 }*/
 
-#users {
+#users, #crear, #infoUser, #cuatroCEROcuatro, #contacto {
     text-align: center;
     font-size: 70px;
     font-weight: 600;
@@ -43,4 +43,10 @@ td {
     background-clip: text;
     -webkit-background-clip: text;
 }
+
+body{
+    background: rgb(240,203,219);
+    background: radial-gradient(circle, rgba(240,203,219,1) 0%, rgba(202,217,236,1) 100%);
+}
+
 

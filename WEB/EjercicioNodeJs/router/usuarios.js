@@ -28,7 +28,7 @@ router.get('/crear',(req,res)=>{
 router.post('/',async(req,res)=>{
     const body=req.body;
     //console.log(body);
-   try{
+    try{
         const usuarioDB=new Usuario(body);
         await usuarioDB.save();
         res.redirect('/usuarios');

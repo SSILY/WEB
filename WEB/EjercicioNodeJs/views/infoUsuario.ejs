@@ -5,40 +5,53 @@
 
 <body>
     <%- include('template/navbar') %>
-    <h1>Información de usuario</h1>
+    <h1 id="infoUser">Información de usuario</h1>
     <% if (error) { %>
-    <p>
-        <%= mensaje%>
-    </p>
-    <a href="/usuarios">Volver</a>
+        <p>
+            <%= mensaje%>
+        </p>
+        <a href="/usuarios">Volver</a>
     <% } %>
     <% if (!error) { %>
-    <table class="table table-hover table-dark text-center">
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-        </tr>
+        <table class="table table-hover table-dark text-center">
             <tr>
-                <td><%=usuario.nombre%></td>
-                <td><%=usuario.apellido%></td>
+                <th>Nombre</th>
+                <th>Apellido</th>
             </tr>
-    </table>
+                <tr>
+                    <td><%=usuario.nombre%></td>
+                    <td><%=usuario.apellido%></td>
+                </tr>
+        </table>
     <% } %>
-
-    <a href="/usuarios">Volver</a>
+        <div class="text-center container-fluid">
+            <a href="/usuarios" class="btn btn-outline-dark">Volver</a>
+            <button id="botonEliminar" data-id="<%=usuario.id%>" class="btn btn-outline-dark">Eliminar</button>
+        </div>
+    
     <!--******************************
     29
     ******************************--> 
-    <button id="botonEliminar" data-id="<%=usuario.id%>">Eliminar</button>
+    <!--<button id="botonEliminar" data-id="<%=usuario.id%>" class="btn btn-dark">Eliminar</button>-->
 
     <!--******************************
     32
-    ******************************-->      
-    <form id="formularioEditar" data-id="<%=usuario.id%>">
-        <input type="text" value="<%=usuario.nombre%>" name="nombre">
-        <input type="text" value="<%=usuario.apellido%>" name="apellido">
-        <button type="submit">Actualizar</button>
-    </form>
+    ******************************-->     
+    <div class="container-fluid pt-4">
+        <form id="formularioEditar" data-id="<%=usuario.id%>">
+            <div class="col-6">
+                <input type="text" value="<%=usuario.nombre%>" name="nombre" class="form-text">
+            </div>
+            <div class="col-6">
+                <input type="text" value="<%=usuario.apellido%>" name="apellido" class="form-text">
+            </div>
+            <div class="col-3">
+                <button type="submit">Actualizar</button>
+            </div>
+            
+        </form>
+    </div>
+    
     <!--******************************
     31
     ******************************--> 
@@ -92,6 +105,6 @@
         });
 
     </script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

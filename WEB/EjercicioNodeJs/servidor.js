@@ -100,7 +100,7 @@ aplicacion.use((req,resp,next)=>{
     resp.status(404).render('404',{
         usuario:"Daniel",
         apellido:"Gutiérrez"
-    })
+    });
 });
 
 
