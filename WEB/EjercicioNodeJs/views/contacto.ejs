@@ -9,7 +9,34 @@
 <body>
     <%- include('template/navbar') %>
     <h1 id="contacto">Página de contacto</h1>
-    <h2>Bienvenid@ <%= usuario %> <%= apellido %></h2>
+    <h2 id="integrantes">Integrantes</h2>
+    <div class="container-fluid pt-3" id="contenedor-integrantes">
+        <div class="card-group">
+            <div class="card text-bg-dark border-dark">
+                <img src="/img/ElJefe-origin_1-1.jpg" class="card-img-top" alt="El Jefe">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Ernesto Flores Machuca</h5>
+                    <p class="card-text"><blockquote>"Tienes poder sobre tu mente - no sobre los acontecimientos externos. Date cuenta de esto, y encontrarás la fuerza."</blockquote></p>
+                </div>
+            </div>
+            <div class="card text-bg-dark border-dark">
+                <img src="/img/wendy-origin_1-1.jpg" class="card-img-top" alt="wendy">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Wendy Areli Rodríguez Arciniega</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    
+                </div>
+            </div>
+            <div class="card text-bg-dark border-dark">
+                <img src="/img/dany-origin_1-1.jpg" class="card-img-top" alt="dany">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Alberto Daniel Gutiérrez Ramos</h5>
+                    <p class="card-text"><blockquote>"Knowledge is power" - Sir Francis Bacon</blockquote></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <%- include('template/footer') %>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>

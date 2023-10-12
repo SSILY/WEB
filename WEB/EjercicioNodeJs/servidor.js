@@ -1,7 +1,6 @@
 /*******************************
 2
 ******************************/
-
 const express = require('express');
 
 const aplicacion=express();
@@ -9,6 +8,11 @@ const aplicacion=express();
 /******************************
 23
 ******************************/
+/** [INFO QUE CURA]
+ *  "Donde colocar las configuraciones de body-parser", le mencione que no importaba, sin embargo se me paso decir que mínimo debía de estar antes del requerimiento del router de usuarios (mi culpa por no especificar eso). 
+
+* Si bien no importa la ubicación respecto al resto de configuraciones del servidor, si importa de esa en específica, ya que al utilizar bodyparser en el router de usuarios debemos de configurarlo antes de requerir. No importa si está antes o después del puerto o de la conexión, importa si está después del requerimiento del router que lo utiliza.
+ */
 const bodyParser = require('body-parser');
 // obtener de un formulario
 aplicacion.use(bodyParser.urlencoded({ extended: false }));
@@ -34,6 +38,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   */
 
 /*OTRA CONEXION A BD*/
+
 const mongoose2 = require('mongoose');
 const user = 'testHome';
 const pass = 'Jh2F9xsyhjL9fZRI';
@@ -44,6 +49,19 @@ mongoose2.connect(uri2, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('[*] Conexion a la segunda base establecida con exito'))
     .catch(e => console.log('[!] ERROR DE CONEXION', e))
 
+
+/*TEST*/
+/*
+const mongoose2 = require('mongoose');
+const user = 'zeran';
+const pass = '65tqNdCKwwvnQYz9';
+const bdName = 'Data';
+const uri2 = `mongodb+srv://${user}:${pass}@tallerwebtest.bdcaxyx.mongodb.net/${bdName}?retryWrites=true&w=majority`;
+
+mongoose2.connect(uri2, { useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log('[*] Conexion a la segunda base establecida con exito'))
+    .catch(e => console.log('[!] ERROR DE CONEXION', e))
+*/
 /*STATIC ROUTES*/
 /*******************************
 6
@@ -73,41 +91,6 @@ aplicacion.use('/usuarios',require('./router/usuarios'));
 aplicacion.use('/canciones', require('./router/canciones'));
 
 /*******************************
-7
-******************************/
-/*aplicacion.get('/contacto',(req,resp)=>{
-    resp.render('contacto')
-});*/
-/*******************************
-8
-******************************/
-/*
-aplicacion.get('/contacto',(req,resp)=>{
-    resp.render('contacto',{
-        usuario:"Daniel",
-        apellido:"Gutierrez"
-    })
-});*/
-
-/*******************************
-4
-******************************/
-/*aplicacion.get('/contacto',(req,resp)=>{
-    resp.sendFile(__dirname+'/public/contacto.html')
-    });*/
-
-/*******************************
-5
-******************************/
-/*aplicacion.use((req,resp,next)=>{
-    resp.status(404).sendFile(__dirname+'/public/404.html')
-});*/
-
-/******7********/
-/*aplicacion.use((req,resp,next)=>{
-    resp.status(404).render('404')
-});*/
-/*******************************
 9
 ******************************/
 aplicacion.use((req,resp,next)=>{
@@ -118,13 +101,8 @@ aplicacion.use((req,resp,next)=>{
 });
 
 
-
-
 /*LAS PETICIONES SE COLOCAN ANTES QUE EL SERVIDOR ESCUCHE*/
 
 aplicacion.listen(puerto, () => {
     console.log('Escuchando las peticiones :D. Desde el puerto',puerto)
 });
-
-
-

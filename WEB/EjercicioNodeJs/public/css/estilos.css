@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "PressStart";
+    src: url('/fonts/PressStart2P-Regular.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,12 +29,23 @@
     -webkit-background-clip: text;
 }
 
-footer {
+#integrantes {
+    font-family: "PressStart";
+    text-align: center;
+    font-size: 30px;
+    background-image: linear-gradient(to left, #00c2cb, #553c9a);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     font-size: x-large;
 }
+
 
 #img404, #welcome{
     display: flex;
@@ -38,4 +56,10 @@ footer {
 
 img[alt="welcome"] {
     width: 100%;
+}
+
+/*FIX PROBLEM WITH SMALL DEVICES (FOOTER COVER OTHER ITEMS)*/
+
+#contenedor-integrantes, #contenedor-actualizar, #contenedor-btn-canciones {
+    margin-bottom: 150px;
 }
