@@ -1,0 +1,33 @@
+<%- include('template/cabecera',{tituloPagina:'Canciones'})%>
+
+<body>
+    <%- include('template/navbar') %>
+    <h1 id="users">Canciones</h1>
+    <table class="table table-hover table-dark text-center">
+        <tr>
+            <th>Nombre</th>
+            <th>Artista</th>
+            <th>Album</th>
+            <th>Genero</th>
+            <th>Información</th>
+        </tr>
+        <% if (arregloCanciones.length>0) { %>
+            <% arregloCanciones.forEach(cancion => { %>
+                <tr>
+                    <td><%=cancion.nombre%></td>
+                    <td><%=cancion.artista%></td>
+                    <td><%=cancion.album%></td>
+                    <td><%=cancion.genero%></td>
+                    <td><a href="canciones/<%=cancion.id %>" class="btn btn-outline-light">Información</a></td>
+                </tr>
+        <% }) %>
+    <% } %>
+        
+    </table>
+    <div class="text-center">
+        <a href="/canciones/crearCancion" class="btn btn-outline-dark">Crear</a>
+    </div>
+    <%- include('template/footer') %>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

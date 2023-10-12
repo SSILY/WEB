@@ -1,0 +1,16 @@
+input[type=radio]{
+accent-color: green;
+}
+
+input[type=checkbox]{
+accent-color: yellow;
+}
+
+input[type=range]{
+    accent-color: red;
+    }
+
+
+    ::placeholder{
+        color: lightblue;
+    }

@@ -7,13 +7,21 @@
 24
 ******************************--> 
     <h1 id="crear">Crear un usuario</h1>
+    <div class="container-fluid">
+        <form action="/usuarios" method="POST" class="row  g-3">
         
-    <form action="/usuarios" method="POST">
-        <input type="text" name="nombre" placeholder="Escribe el nombre">
-        <input type="text" name="apellido" placeholder="Escribe el apellido">
-        <button type="submit">Enviar</button>
-    </form>
-    <a href="/usuarios">Usuarios</a>
+            <input type="text" name="nombre" placeholder="Escribe el nombre" class="form-control-lg">
+            
+            <input type="text" name="apellido" placeholder="Escribe el apellido" class="form-control-lg">
+            
+            <button type="submit" class="btn btn-outline-dark">Enviar</button>
+        </form>
+    </div>
+    <hr class="border border-dark border-2 opacity-50">
+    <div class="container-fluid">
+        <a href="/usuarios" class="btn btn-outline-dark">Usuarios</a>
+    </div>
+    <%- include('template/footer') %>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

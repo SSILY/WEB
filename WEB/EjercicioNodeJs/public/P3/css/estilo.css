@@ -1,0 +1,124 @@
+/*h1 general
+    letra azul
+    imagen "desarrollo.png"
+*/
+h1{
+color: blue;
+}
+
+h1::after{
+    content: url("../img/desarrollo.png");
+}
+
+/*parrafo hermano inmediato de h2 primera linea y parrafo primer hijo primera linea
+    letra negra
+*/
+h2+p::first-line, p:first-child::first-line{
+    color: black;
+}
+
+/*parrafos general
+    color naranja
+    estilo oblicuo(italica)
+*/
+p{
+    color: orange;
+    font-style: oblique;
+}
+
+/*parrafo hermano inmediato de h2 seleccion de texto
+    fondo azul
+    letra amarilla
+*/
+h2+p::selection{
+    background-color: blue;
+    color: yellow;
+}
+
+/*h2 y h3 general
+    letra roja
+*/
+h2, h3{
+    color: red;
+}
+
+/*marcadores en general
+    letra fuchsia
+    letra muy grande
+*/
+::marker{
+    color: fuchsia;
+    font-size: xx-large;
+}
+
+/*enlaces contenidos dentro de una lista ordenada y un elemento de lista
+    fondo aqua
+    tamaño grande
+*/
+ul>li>a:hover{
+    background-color: aqua;
+    font-size: x-large;
+}
+
+/*parrafos contenidos dentro de listas desordenadas
+    letra roja
+    fondo rosa
+    estilo normal
+*/
+ul>p{
+    color: red;
+    background-color: pink;
+    font-style: normal;
+}
+
+/*h1 hermano inmediato de una lista ordenada y h1 hermano inmediato de iframe
+    color de borde amarillo
+    estilo de borde solido
+    ancho de borde 10px
+    fondo azure
+*/
+ol+h1, iframe+h1{
+    border-color: yellow;
+    border-style: solid;
+    border-width: 10px;
+    background-color: azure;
+}
+
+/*enlaces en general
+    letra violeta
+*/
+a:link{
+    color: violet;
+}
+
+/*Botones al ser pulsados
+    fondo aquamarine
+    tamaño de letra muy grande
+*/
+button:active{
+    background-color: aquamarine;
+    font-size: xx-large;
+}
+
+/*Enlaces contenidos dentro de botones
+    letra azul
+    
+    margen izquierdo 30px
+    margen derecho 30px
+*/
+button a:active{
+    color: blue;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/*enlaces con atributo href que terminen en .html al ser pulsados
+    letra cafe
+    margen izquierdo 30px
+    margen derecho 30px
+*/
+a[href$=".html"]:active{
+    color: brown;
+    margin-left: 30px;
+    margin-right: 30px;
+}

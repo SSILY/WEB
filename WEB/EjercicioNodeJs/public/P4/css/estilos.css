@@ -1,0 +1,293 @@
+
+.container {  
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    gap: 10px 0px;
+    grid-template-areas:
+        "header header header"
+        "cuerpo-form cuerpo-form cuerpo-form"
+        "cuerpo-tabla cuerpo-tabla cuerpo-tabla"
+        "footer footer footer";
+        border: solid;
+}
+
+
+h1::after {
+    content: url("../img/desarrollo.png");
+}
+
+
+h1 {
+    color: blue;
+    
+}
+
+
+.header { 
+    display: grid;
+    grid-area: header;
+    background-color: orange;
+    justify-items: center;
+    align-items: end;
+}
+
+
+.cuerpo-form {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "etiquetas formulario formulario botones"
+        "etiquetas formulario formulario botones";
+    grid-area: cuerpo-form;
+}
+
+p {
+    font-size: x-large;
+    margin-top: 8px;
+}
+
+
+ul > li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.etiquetas {
+    display: grid;
+    gap: 0 0;
+    grid-area: etiquetas;
+    justify-items: end; 
+    text-align: right;
+}
+
+
+.etiquetas p{
+    margin-bottom: 25px;
+}
+
+
+.etiquetas ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.etiquetas ul li {
+    margin-bottom: 15px;
+}
+
+
+.etiquetas ul li a {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+.etiquetas ul li a:active {
+    background-color: white;
+    color: blueviolet;
+    font-size: x-large;
+    font-weight: unset;
+}
+
+
+.formulario { 
+    grid-area: formulario; 
+    display: grid;
+    justify-items: stretch;
+}
+
+
+.formulario form {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 10px 0px;
+    justify-items: stretch;
+}
+
+
+input[type="text"], input[type="email"] {
+    height: 30px;
+}
+
+input[type="submit"] {
+    height: 40px;
+    border: 3px solid blue;
+    background-color: white;
+    color: blue;
+    font-size: large;
+}
+
+
+.botones { 
+    grid-area: botones;
+    display: grid;
+    justify-items: center;
+}
+
+
+.botones p {
+    margin-bottom: 50px;
+}
+
+
+.botones ul {
+    padding: 0;
+}
+
+
+.botones ul li {
+    margin-bottom: 40px;
+}
+
+
+.botones ul li a {
+    display: block;
+	width:100%;
+    height: 30px;
+	padding: 6px 0;
+	text-align: center;
+	font-size: x-large;
+    font-weight: bold;
+    color:  black;
+	background-color: aqua;
+}
+
+
+.botones ul li a:hover {
+    border: solid;
+    border-color: aqua;
+    background-color: white;
+    color: aqua;
+}
+
+
+.cuerpo-tabla {  
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    /*grid-auto-flow: row;*/
+    grid-template-areas:
+        "img1 img1 tabla tabla tabla img2"
+        "img1 img1 tabla tabla tabla img2";
+    grid-area: cuerpo-tabla;
+}
+
+
+img {
+    border: 10px solid red;
+    margin: 10px;
+    /*overflow: hidden;*/
+}
+
+
+.img1 { 
+    grid-area: img1;
+    /*display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;*/
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.tabla { 
+    grid-area: tabla; 
+    display: flex;
+    align-content: stretch;
+    
+}
+
+
+.tabla table {
+    flex-grow: 10;
+    flex-shrink: 10;
+}
+
+
+table, th, td {
+    text-align: center;
+    border: 5px solid blue;
+    border-collapse: collapse;
+}
+
+
+.img2 { 
+    grid-area: img2; 
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /*display: flex;
+    justify-items: center*/
+}
+
+
+.footer {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    /*grid-auto-flow: row;*/
+    grid-template-areas:
+        "Equipo practica4 practica4 practica4 empresa";
+    grid-area: footer;
+    
+}
+
+
+.Equipo { 
+    display: grid;
+    grid-area: Equipo;
+    background-color: aqua;
+    justify-items: center;
+    align-items: end;
+}
+
+.Equipo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+.practica4 { 
+    /*display: grid;
+    grid-area: practica4;
+    background-color: violet;
+    justify-items: center;
+    align-items: end;*/
+    grid-area: practica4;
+    background-color: violet;
+    display: flex;
+    flex: 10 10;
+    justify-content: center;
+}
+
+
+.practica4 h1{
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+}
+
+
+.empresa { 
+    display: grid;
+    grid-area: empresa;
+    background-color: aqua;
+    justify-items: center;
+    align-items: end;
+}
+
+
+.empresa h1 {
+    margin: 0;
+    padding: 0;
+}

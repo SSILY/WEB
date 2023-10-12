@@ -36,21 +36,19 @@
 
     <!--******************************
     32
-    ******************************-->     
+    ******************************-->
+    <hr class="border border-dark border-2 opacity-50">
     <div class="container-fluid pt-4">
-        <form id="formularioEditar" data-id="<%=usuario.id%>">
-            <div class="col-6">
-                <input type="text" value="<%=usuario.nombre%>" name="nombre" class="form-text">
-            </div>
-            <div class="col-6">
-                <input type="text" value="<%=usuario.apellido%>" name="apellido" class="form-text">
-            </div>
-            <div class="col-3">
-                <button type="submit">Actualizar</button>
-            </div>
+        <form id="formularioEditar" data-id="<%=usuario.id%>" class="row g-3">
             
+            <input type="text" value="<%=usuario.nombre%>" name="nombre" class="form-text form-control-lg form-control-dark">
+            
+            <input type="text" value="<%=usuario.apellido%>" name="apellido" class="form-text form-control-lg form-control-dark">
+            
+            <button type="submit" class="btn btn-outline-dark">Actualizar</button>
         </form>
     </div>
+    <%- include('template/footer') %>
     
     <!--******************************
     31

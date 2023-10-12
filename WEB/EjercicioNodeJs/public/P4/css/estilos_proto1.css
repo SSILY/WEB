@@ -1,0 +1,103 @@
+/*
+* Contenedor principal
+* Disposicion 6 cols x 8 filas
+*/
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px; /*PROPIEDAD*/
+    grid-template-areas:
+        "header header header header header header"
+        "menu menu main main main main"
+        "menu menu main main main main"
+        "menu menu main main main main"
+        "menu menu main main main main"
+        "menu menu main main main main"
+        "menu menu main main main main"
+        "footer footer footer footer footer footer";
+}
+
+.header { 
+    grid-area: header;
+    background-color: aquamarine;
+    
+}
+
+.menu { 
+    grid-area: menu;
+    background-color: bisque;
+    display: grid;
+    align-items: end; /*PROPIEDAD*/
+    gap: 0 0;
+}
+
+p {
+    border: solid;
+}
+
+#mini-container {
+    display: grid;
+    justify-items: center; /*PROPIEDAD*/
+    border: solid;
+    background-color: azure;
+}
+
+.cuadrados {
+    width: 30px;
+    height: 30px;
+    background-color: cyan;
+    
+}
+
+.main { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 0px; /*PROPIEDAD*/
+    grid-template-areas:
+        "seccion1 seccion1"
+        "seccion2 seccion2";
+    grid-area: main;
+    background-color: chocolate;
+}
+
+/*FLEX*/
+.seccion1 { 
+    grid-area: seccion1;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-evenly; /*PROPIEDAD*/
+}
+
+.rectangulos {
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+    background-color: aqua;
+    align-self: flex-end; /*PROPIEDAD*/
+    flex: 1 1;
+}
+
+/*FLEX*/
+.seccion2 { 
+    grid-area: seccion2;
+    background-color: darkgray;
+    display: flex;
+    align-items: center; /*PROPIEDAD*/
+    justify-content: center; /*PROPIEDAD*/
+
+}
+
+.rectangulos2 {
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+    background-color: aqua;
+    flex: 10 10;
+}
+
+.footer { 
+    grid-area: footer;
+    background-color: darkslategrey;
+}

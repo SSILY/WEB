@@ -44,9 +44,22 @@ td {
     -webkit-background-clip: text;
 }
 
+/*
 body{
     background: rgb(240,203,219);
     background: radial-gradient(circle, rgba(240,203,219,1) 0%, rgba(202,217,236,1) 100%);
+}*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: x-large;
 }
 
-
+#img404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}

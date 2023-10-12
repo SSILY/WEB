@@ -1,0 +1,31 @@
+
+<%- include('template/cabecera',{tituloPagina:'Crear Cancion'})%>
+
+<body>
+    <%- include('template/navbar') %>
+    <!--******************************
+24
+******************************--> 
+    <h1 id="crear">Crear una cancion</h1>
+    <div class="container-fluid">
+        <form action="/canciones" method="POST" class="row  g-3">
+        
+            <input type="text" name="nombre" placeholder="Escribe el nombre" class="form-control-lg">
+            
+            <input type="text" name="artista" placeholder="Escribe el artista" class="form-control-lg">
+
+            <input type="text" name="album" placeholder="Escribe el album" class="form-control-lg">
+
+            <input type="text" name="genero" placeholder="Escribe el genero" class="form-control-lg">
+            
+            <button type="submit" class="btn btn-outline-dark">Enviar</button>
+        </form>
+    </div>
+    <hr class="border border-dark border-2 opacity-50">
+    <div class="container-fluid">
+        <a href="/canciones" class="btn btn-outline-dark">Canciones</a>
+    </div>
+    <%- include('template/footer') %>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

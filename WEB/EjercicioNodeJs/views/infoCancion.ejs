@@ -1,0 +1,114 @@
+<!--******************************
+27
+******************************--> 
+<%- include('template/cabecera',{tituloPagina:'Info Cancion'})%>
+
+<body>
+    <%- include('template/navbar') %>
+    <h1 id="infoUser">Información de la cancion</h1>
+    <% if (error) { %>
+        <p>
+            <%= mensaje%>
+        </p>
+        <a href="/canciones">Volver</a>
+    <% } %>
+    <% if (!error) { %>
+        <table class="table table-hover table-dark text-center">
+            <tr>
+                <th>Nombre</th>
+                <th>Artista</th>
+                <th>Album</th>
+                <th>Genero</th>
+            </tr>
+            <tr>
+                <td><%=cancion.nombre%></td>
+                <td><%=cancion.artista%></td>
+                <td><%=cancion.album%></td>
+                <td><%=cancion.genero%></td>
+            </tr>
+        </table>
+    <% } %>
+        <div class="text-center container-fluid">
+            <a href="/canciones" class="btn btn-outline-dark">Volver</a>
+            <button id="botonEliminar" data-id="<%=cancion.id%>" class="btn btn-outline-dark">Eliminar</button>
+        </div>
+    
+
+    <!--******************************
+    32
+    ******************************-->
+    <hr class="border border-dark border-2 opacity-50">
+    <div class="container-fluid pt-4">
+        <form id="formularioEditar" data-id="<%=cancion.id%>" class="row g-3">
+            
+            <input type="text" value="<%=cancion.nombre%>" name="nombre" class="form-text form-control-lg form-control-dark">
+            
+            <input type="text" value="<%=cancion.artista%>" name="artista" class="form-text form-control-lg form-control-dark">
+
+            <input type="text" value="<%=cancion.album%>" name="album" class="form-text form-control-lg form-control-dark">
+            
+            <input type="text" value="<%=cancion.genero%>" name="genero" class="form-text form-control-lg form-control-dark">
+            
+            <button type="submit" class="btn btn-outline-dark">Actualizar</button>
+        </form>
+    </div>
+    <%- include('template/footer') %>
+    
+    <!--******************************
+    31
+    ******************************--> 
+    <script>
+        const botonEliminar = document.querySelector('#botonEliminar');
+        botonEliminar.addEventListener('click', async() => {
+            console.log('Diste click');
+            const id = botonEliminar.dataset.id;
+            try{
+                const dato = await fetch(`/canciones/${id}`,{method:'delete'});
+                const res = await dato.json();
+                if(res.estado){
+                    alert(res.mensaje);
+                    window.location.href='/canciones';
+                }else{
+                    console.log(res);
+                }
+        
+            }catch (error){
+                console.log(error);
+            }
+        });
+
+        /******************************
+        34
+        ******************************/
+
+        const formularioEditar = document.querySelector('#formularioEditar');
+        formularioEditar.addEventListener('submit',async (e)=>{
+            //Se tiene que tener si o si esta de preventDefault
+            e.preventDefault();
+            const nombre = formularioEditar.elements['nombre'].value;
+            const artista = formularioEditar.elements['artista'].value;
+            const album = formularioEditar.elements['album'].value;
+            const genero = formularioEditar.elements['genero'].value;
+            const id = formularioEditar.dataset.id;
+                const dato = await fetch(`/canciones/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({nombre, artista, album, genero})
+                });
+                const res = await dato.json();
+                if(res.estado){
+                    alert('Se actualizo de forma correcta');
+                    window.location.href='/canciones';
+                    
+                }else{
+                    alert('No se pudo actualizar');
+                    console.log(res);
+                }
+        });
+
+    </script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
