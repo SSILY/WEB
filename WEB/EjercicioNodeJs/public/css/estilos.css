@@ -60,6 +60,6 @@ img[alt="welcome"] {
 
 /*FIX PROBLEM WITH SMALL DEVICES (FOOTER COVER OTHER ITEMS)*/
 
-#contenedor-integrantes, #contenedor-actualizar, #contenedor-btn-canciones {
+#contenedor-integrantes, #contenedor-actualizar, #contenedor-btn-canciones, #contenedor-btn-crear {
     margin-bottom: 150px;
 }
