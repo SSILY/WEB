@@ -37,6 +37,13 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(e => console.log('error de conexión', e))
   */
 
+/**
+ * NOTAS IMPORTANTES
+ * 1. Para el correcto funcionamiento se necesita crear una base de datos llamada Data.
+ * 2. Dentro de esa bd, hacer una colección llamada "cancions" [JUSTO COMO ESTÁ]
+ * 3. Colocar correctamente la uri con el usuario, contraseña y nombre de la BD
+ */
+
 /*OTRA CONEXION A BD*/
 
 const mongoose2 = require('mongoose');
